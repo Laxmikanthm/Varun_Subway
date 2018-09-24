@@ -1,0 +1,32 @@
+{
+  "capabilities":
+  [
+
+    {
+      "browserName":"chrome",
+      "maxInstances":3,
+      "platform": "Windows",
+      "version": "66.0"
+    },
+    {
+      "browserName": "firefox",
+      "version": "46",
+      "platform": "mac",
+      "acceptSslCerts": true,
+      "javascriptEnabled": true,
+      "takesScreenshot": true,
+      "maxInstances": 2
+
+    }
+ ],
+  "configuration":
+  {
+    "nodeTimeout":120,
+    "port":5556,
+    "hubPort":5555,
+    "hubHost":"localhost",
+    "register":true,
+    "cleanUpCycle":2000,
+    "maxSession":2
+  }
+}

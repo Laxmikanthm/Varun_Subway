@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="ProductListingPage" class="pojos.ProductListing">
+        <property name="productName1" value="NSF Approved Clear PETG Tray - Set of 12"/>
+        <property name="specialOrderItem" value="Communal Table 30x72x30 - Vapor Stranz"/>
+        <property name="leasableProduct" value="Refrigerated Self-Serve High Profile Specialty Merchandiser"/>
+        <property name="nonLeasableProduct" value="LTR,SUB Subway 2017 Y/W ON Raceway"/>
+
+    </bean>
+
+
+</beans>

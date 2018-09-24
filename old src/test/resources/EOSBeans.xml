@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!--<bean id="drivers" class="execution.driver.Drivers">
+
+    </bean>-->
+    <beans profile="local">
+        <bean id="executors" class="execution.platform.Executors">
+
+            <property name="executors">
+                <list>
+                    <ref bean="localMobileExecutor"></ref>
+                    <ref bean="localBrowserExecutor"></ref>
+                </list>
+            </property>
+        </bean>
+        <bean id="localMobileExecutor" class="execution.platform.local.LocalMobileExecutor"></bean>
+        <bean id="localBrowserExecutor" class="execution.platform.local.LocalBrowserExecutor"></bean>
+    </beans>
+    <beans profile="sauce">
+        <bean id="executors" class="execution.platform.Executors">
+
+            <property name="executors">
+                <list>
+                    <ref bean="sauceBrowserExecutor"></ref>
+                </list>
+            </property>
+        </bean>
+        <bean id="sauceBrowserExecutor" class="execution.platform.SauceLabs.SauceLabsBrowserExecutor"></bean>
+
+    </beans>
+
+</beans>

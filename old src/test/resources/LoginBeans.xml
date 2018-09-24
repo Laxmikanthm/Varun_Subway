@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="login" class="pojos.Login">
+        <property name="dataSource" value="Staging"/>
+        <property name="sSOItem" value="equipmentorderingsb2"/>
+        <property name="userId" value="54295"/>
+        <property name="nonLitigationStore" value="160"/>
+    </bean>
+
+    <bean id="storeWithDocuments" class="pojos.Login">
+        <property name="dataSource" value="Staging"/>
+        <property name="sSOItem" value="equipmentorderingsb2"/>
+        <property name="userId" value="54292"/>
+        <property name="storeWithDocuments" value="Restaurant 19612"/>
+    </bean>
+
+    <bean id="singleRestaurantOwnerIsNotLitigation" class="pojos.Login">
+        <property name="dataSource" value="Staging"/>
+        <property name="sSOItem" value="equipmentorderingsb2"/>
+        <property name="userId" value="2079895"/>
+    </bean>
+
+    <bean id="SingleResOwnerRestIsLitigation" class="pojos.Login">
+        <property name="dataSource" value="Staging"/>
+        <property name="sSOItem" value="equipmentorderingsb2"/>
+        <property name="userId" value="1891165"/>
+    </bean>
+
+    <bean id="multiResOwnerRestIsNotLitigation" class="pojos.Login">
+        <property name="dataSource" value="Staging"/>
+        <property name="sSOItem" value="equipmentorderingsb2"/>
+        <property name="userId" value="54295"/>
+        <property name="storeToSelect" value="Restaurant 1515"/>
+        <property name="nonLitigationStore" value="Restaurant 49605"/>
+    </bean>
+
+    <bean id="multiResOwnerAtLeastOneRestIsLitigation" class="pojos.Login">
+        <property name="dataSource" value="Staging"/>
+        <property name="sSOItem" value="equipmentorderingsb2"/>
+        <property name="userId" value="119478"/>
+        <property name="litigationStore" value="Restaurant 160"/>
+        <property name="nonLitigationStore" value="Restaurant 49605"/>
+    </bean>
+
+    <bean id="userNotApprovedForPreAuth" class="pojos.Login">
+        <property name="dataSource" value="Staging"/>
+        <property name="sSOItem" value="equipmentorderingsb2"/>
+        <property name="userId" value="54293"/>
+    </bean>
+
+</beans>
